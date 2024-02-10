@@ -1,7 +1,7 @@
 package servers
 
 import (
-	monitorhandlers "github.com/MarkTBSS/go-monitorModule/modules/monitor/monitorHandlers"
+	"github.com/MarkTBSS/go-monitorModule/modules/monitor/monitorHandlers"
 	"github.com/gofiber/fiber/v2"
 )
 
@@ -22,6 +22,6 @@ type moduleFactory struct {
 }
 
 func (m *moduleFactory) MonitorModule() {
-	handler := monitorhandlers.MonitorHandler(m.server.cfg)
+	handler := monitorHandlers.MonitorHandler(m.server.cfg)
 	m.router.Get("/", handler.HealthCheck)
 }

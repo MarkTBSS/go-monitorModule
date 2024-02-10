@@ -1,4 +1,4 @@
-package monitorhandlers
+package monitorHandlers
 
 import (
 	"github.com/MarkTBSS/go-monitorModule/config"
